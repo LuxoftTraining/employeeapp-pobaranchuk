@@ -22,6 +22,7 @@ function addEmployee(name, surname) {
     DATA.employees.push({ id, name, surname });
     return id;
 }
+
 function removeEmployee(id) {
     let index = 0;
     for (let e of DATA.employees) {
@@ -45,8 +46,6 @@ function showEmployees() {
         showEmployee(x);
     }
 }
-
-
 
 function findById(id) {
     for (let e of DATA.employees) {
@@ -83,13 +82,13 @@ function setDateOfBirth(id, date) {
     const employee = findById(id);
     employee.dateOfBitrh = date;
 }
+
 function getAge(id) {
     const employee = findById(id);
     let ageDiff = Date.now() - employee.dateOfBirth.getTime();
     let ageDate = new Date(ageDiff); // miliseconds from epoch
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
-
 
 function formatDate(date) {
     let day = date.getDate();
