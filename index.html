@@ -4,20 +4,13 @@
     <title>Employee App</title>
   </head>
   <body id="body">
-    <div id="employeesPlaceholder">
-      <h1>This is Employee Application</h1>
-      <p id="p1">"This is <i> document </i>"</p>
-      <a href="javascript:new Date().toLocaleTimeString();">
-        What time is it?
-      </a>
-      <p></p>
-    </div>
     <div>
       Name:
       <input id="name" placeholder="Name" />
       Surname:
       <input id="surname" placeholder="Surname" />
       <button onclick="addEmployeeUI()">Add imployee</button>
+      <div id="addEmployeeFormErrorMessage"></div>
     </div>
   </body>
   <script src="ui.js"></script>
