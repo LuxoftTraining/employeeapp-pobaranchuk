@@ -34,16 +34,17 @@ function removeEmployee(id) {
 
 function showEmployee(employee) {
     const keys = Object.keys(employee);
-    console.log("Employee " + employee["name"] + ": ");
-    for (let key in keys) {
+    console.log("Employee info " + employee["name"] + " :");
+    for (let key of keys) {
         console.log(key + " = " + employee[key]);
     }
 }
 
 function showEmployees() {
-    // DATA.employees.forEach(showEmployee); 
-    for (let x in DATA.employees) {
-        showEmployee(x);
+    //DATA.employees.forEach(showEmployee); 
+    for (let e of DATA.employees) {
+       
+        showEmployee(e);
     }
 }
 

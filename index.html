@@ -1,19 +1,29 @@
 <meta charset="utf-8" />
 <html>
-
-<head>
+  <head>
     <title>Employee App</title>
-
-</head>
-
-<body id = "body"> 
-    This is Employee Application
-    <button onclick="console.log(DATA)">Click me</button>
-</body>
-<script>
-    console.log(123);
-</script>
-<script src="employees-json.js"></script>
-<script src="service.js"></script>
-
+  </head>
+  <body id="body">
+    <div id="employeesPlaceholder">
+      <h1>This is Employee Application</h1>
+      <p id="p1">"This is <i> document </i>"</p>
+      <a href="javascript:new Date().toLocaleTimeString();">
+        What time is it?
+      </a>
+      <p></p>
+    </div>
+    <div>
+      Name:
+      <input id="name" placeholder="Name" />
+      Surname:
+      <input id="surname" placeholder="Surname" />
+      <button onclick="addEmployeeUI()">Add imployee</button>
+    </div>
+  </body>
+  <script src="ui.js"></script>
+  <script src="employees-json.js"></script>
+  <script src="service.js"></script>
+  <script>
+    runUI();
+  </script>
 </html>
