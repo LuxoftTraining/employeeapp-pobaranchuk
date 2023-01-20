@@ -1,0 +1,18 @@
+div,
+button {
+  color: rgb(186, 149, 234);
+}
+h1 {
+  color: aquamarine;
+  font-size: 30pt;
+}
+#subtitle {
+  color: rgb(199, 35, 35);
+}
+div#div1 p {
+  color: hotpink;
+}
+
+h2 + p {
+  color: black;
+}
