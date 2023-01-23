@@ -42,8 +42,7 @@ function showEmployee(employee) {
 
 function showEmployees() {
     //DATA.employees.forEach(showEmployee); 
-    for (let e of DATA.employees) {
-       
+    for (let e of DATA.employees) {       
         showEmployee(e);
     }
 }

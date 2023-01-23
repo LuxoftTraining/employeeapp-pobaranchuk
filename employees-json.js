@@ -4,31 +4,31 @@ const DATA = {
         {
             id: 1,
             name: "Peter",
-            surmane: "Peterson",
+            surname: "Peterson",
             department: "IT"
         },
         {
             id: 2,
             name: "John",
-            surmane: "Dohn",
+            surname: "Dohn",
             department: "HR"
         },
         {
             id: 3,
             name: "Ala",
-            surmane: "Flask",
+            surname: "Flask",
             department: "PR"
         },
         {
             id: 4,
             name: "Viktor",
-            surmane: "Rutenberg",
+            surname: "Rutenberg",
             department: "IT"
         },
         {
             id: 5,
             name: "Kris",
-            surmane: "Ales",
+            surname: "Ales",
             department: "PR"
         }
     ]

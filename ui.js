@@ -1,22 +1,23 @@
 const PLACEHOLDER = "employeesPlaceholder";
 
 function clearEmployeesPlaceholder() {
-  document.getElementById(PLACEHOLDER).innerHTML = "";
+  document.getElementById(PLACEHOLDER).innerHTML = " ";
 }
 
-function showEmployees(employees) {
+function showEmployeesUI(employees) {
   clearEmployeesPlaceholder();
   const ul = document.createElement("ul");
-  for (let employee of employees) {
-    const li = document.createElement("li");
-    ul.appendChild(li);
+  
+  for (let employee of employees) {  
+    const removeButton = document.createElement("button"); 
+    const li = document.createElement("li");   
+    removeButton.innerHTML = "Remove";
+    removeButton.addEventListener("click", () => removeEmployeeUI(employee.id));          
     li.innerHTML = employee.name + " " + employee.surname;
+    li.appendChild(removeButton);
+    ul.appendChild(li);
   }
   document.getElementById(PLACEHOLDER).appendChild(ul);
-}
-
-function runUI() {
-  showEmployees(DATA.employees);
 }
 
 function addEmployeeUI() {
@@ -32,9 +33,17 @@ function addEmployeeUI() {
   document.getElementById("addEmployeeFormErrorMessage").innerHTML = errorHTML;
   if (errorHTML.length != 0) return;
 
-  const id = addEmployee(name, surname);
   document.getElementById("name").value = "";
   document.getElementById("surname").value = "";
+  addEmployee(name, surname);
+  showEmployeesUI(DATA.employees);
+}
 
-  showEmployees(DATA.employees);
+function removeEmployeeUI(id) {
+  removeEmployee(id);
+  showEmployeesUI(DATA.employees);
+}
+
+function runUI() {
+  showEmployeesUI(DATA.employees);
 }
